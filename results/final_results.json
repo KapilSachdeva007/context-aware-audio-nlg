@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "project": "Context-Aware NLG for Household Audio Events",
+    "student": "Kapil Sachdeva (2024AB05138)",
+    "institution": "BITS Pilani WILP",
+    "date": "2026-07-19T18:54:01.163886",
+    "mock_llm": false
+  },
+  "evaluation_summary": {
+    "sed_f1": 0.0,
+    "sed_map": 0.5212121212121212,
+    "sed_precision": 0.0,
+    "sed_recall": 0.0,
+    "ctx_accuracy": 0.0,
+    "ctx_correct": 0,
+    "bleu4": 0.0156,
+    "rouge_l": 0.14352,
+    "bertscore_f1": 0.7452,
+    "latency_ms": 17044.06,
+    "sed_latency_ms": 2924.8599999999997,
+    "nlg_latency_ms": 14119.2,
+    "ram_mb": 1190,
+    "benchmark": {
+      "yamnet_f1": 0.0,
+      "panns_f1": 0.0,
+      "audioclip_f1": 0.0
+    }
+  },
+  "scenario_results": [
+    {
+      "scenario": "01_social_gathering",
+      "gt_context": "Social Gathering",
+      "predicted_context": "Ambient / Quiet Household",
+      "context_correct": false,
+      "priority": "Default",
+      "generated_insight": "The household is quiet, with no disturbances during the observation period of 0 seconds.",
+      "reference_insight": "A social gathering or party appears to be taking place, with people talking, music playing, and laughter heard.",
+      "sed_metrics": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 1,
+        "FN": 3
+      },
+      "nlg_metrics": {
+        "BLEU-4": 0.0107,
+        "ROUGE-L": 0.0625,
+        "BERTScore-F1": 0.7201
+      },
+      "sed_latency_ms": 14467.4,
+      "nlg_latency_ms": 64980.7,
+      "total_latency_ms": 79448.1,
+      "detected_labels": [
+        "Music"
+      ],
+      "detected_conf": {
+        "Music": 0.8891260027885437
+      },
+      "gt_labels": [
+        "speech",
+        "laughter",
+        "music"
+      ]
+    },
+    {
+      "scenario": "02_kitchen_cooking",
+      "gt_context": "Kitchen Cooking Active",
+      "predicted_context": "Ambient / Quiet Household",
+      "context_correct": false,
+      "priority": "Default",
+      "generated_insight": "The household is quiet, with no disturbances during the observation period of 0 seconds.",
+      "reference_insight": "Cooking activity is happening in the kitchen with sounds of frying and running water.",
+      "sed_metrics": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 1,
+        "FN": 3
+      },
+      "nlg_metrics": {
+        "BLEU-4": 0.0202,
+        "ROUGE-L": 0.2143,
+        "BERTScore-F1": 0.7429
+      },
+      "sed_latency_ms": 58.3,
+      "nlg_latency_ms": 1252.7,
+      "total_latency_ms": 1311.0,
+      "detected_labels": [
+        "Running water"
+      ],
+      "detected_conf": {
+        "Running water": 0.5925295948982239
+      },
+      "gt_labels": [
+        "dishes",
+        "running_water",
+        "frying"
+      ]
+    },
+    {
+      "scenario": "03_wellness_cough",
+      "gt_context": "Wellness Observation: Coughing",
+      "predicted_context": "Ambient / Quiet Household",
+      "context_correct": false,
+      "priority": "Default",
+      "generated_insight": "The household is quiet, with no disturbances during the observation period of 0 seconds.",
+      "reference_insight": "Repeated coughing has been detected over the monitoring period, suggesting a possible respiratory concern.",
+      "sed_metrics": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1
+      },
+      "nlg_metrics": {
+        "BLEU-4": 0.0143,
+        "ROUGE-L": 0.1429,
+        "BERTScore-F1": 0.7793
+      },
+      "sed_latency_ms": 25.1,
+      "nlg_latency_ms": 1407.6,
+      "total_latency_ms": 1432.7,
+      "detected_labels": [],
+      "detected_conf": {},
+      "gt_labels": [
+        "cough"
+      ]
+    },
+    {
+      "scenario": "04_emergency_alert",
+      "gt_context": "Emergency: Glass Break",
+      "predicted_context": "Ambient / Quiet Household",
+      "context_correct": false,
+      "priority": "Default",
+      "generated_insight": "The household is quiet, with no disturbances during the observation period of 0 seconds.",
+      "reference_insight": "A potential emergency has been detected, with sounds of glass breaking and an alarm present.",
+      "sed_metrics": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 1,
+        "FN": 2
+      },
+      "nlg_metrics": {
+        "BLEU-4": 0.0158,
+        "ROUGE-L": 0.1379,
+        "BERTScore-F1": 0.744
+      },
+      "sed_latency_ms": 36.0,
+      "nlg_latency_ms": 1687.0,
+      "total_latency_ms": 1723.0,
+      "detected_labels": [
+        "Alarm"
+      ],
+      "detected_conf": {
+        "Alarm": 0.22576439380645752
+      },
+      "gt_labels": [
+        "alarm",
+        "glass_break"
+      ]
+    },
+    {
+      "scenario": "05_pet_care",
+      "gt_context": "Pet Distress (Appliance Conflict)",
+      "predicted_context": "Ambient / Quiet Household",
+      "context_correct": false,
+      "priority": "Default",
+      "generated_insight": "The household is quiet, with no disturbances during the observation period of 0 seconds.",
+      "reference_insight": "A pet appears distressed while a household appliance is operating nearby.",
+      "sed_metrics": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 2
+      },
+      "nlg_metrics": {
+        "BLEU-4": 0.017,
+        "ROUGE-L": 0.16,
+        "BERTScore-F1": 0.7397
+      },
+      "sed_latency_ms": 37.5,
+      "nlg_latency_ms": 1268.0,
+      "total_latency_ms": 1305.5,
+      "detected_labels": [],
+      "detected_conf": {},
+      "gt_labels": [
+        "vacuum_cleaner",
+        "dog"
+      ]
+    }
+  ],
+  "benchmark": [
+    {
+      "Scenario": "01_social_gathering",
+      "YAMNet F1": 0.0,
+      "YAMNet P": 0.0,
+      "YAMNet R": 0.0,
+      "PANNs F1": 0.0,
+      "PANNs P": 0.0,
+      "PANNs R": 0.0,
+      "AudioCLIP F1": 0.0,
+      "AudioCLIP P": 0.0,
+      "AudioCLIP R": 0.0
+    },
+    {
+      "Scenario": "02_kitchen_cooking",
+      "YAMNet F1": 0.0,
+      "YAMNet P": 0.0,
+      "YAMNet R": 0.0,
+      "PANNs F1": 0.0,
+      "PANNs P": 0.0,
+      "PANNs R": 0.0,
+      "AudioCLIP F1": 0.0,
+      "AudioCLIP P": 0.0,
+      "AudioCLIP R": 0.0
+    },
+    {
+      "Scenario": "03_wellness_cough",
+      "YAMNet F1": 0.0,
+      "YAMNet P": 0.0,
+      "YAMNet R": 0.0,
+      "PANNs F1": 0.0,
+      "PANNs P": 0.0,
+      "PANNs R": 0.0,
+      "AudioCLIP F1": 0.0,
+      "AudioCLIP P": 0.0,
+      "AudioCLIP R": 0.0
+    },
+    {
+      "Scenario": "04_emergency_alert",
+      "YAMNet F1": 0.0,
+      "YAMNet P": 0.0,
+      "YAMNet R": 0.0,
+      "PANNs F1": 0.0,
+      "PANNs P": 0.0,
+      "PANNs R": 0.0,
+      "AudioCLIP F1": 0.0,
+      "AudioCLIP P": 0.0,
+      "AudioCLIP R": 0.0
+    },
+    {
+      "Scenario": "05_pet_care",
+      "YAMNet F1": 0.0,
+      "YAMNet P": 0.0,
+      "YAMNet R": 0.0,
+      "PANNs F1": 0.0,
+      "PANNs P": 0.0,
+      "PANNs R": 0.0,
+      "AudioCLIP F1": 0.0,
+      "AudioCLIP P": 0.0,
+      "AudioCLIP R": 0.0
+    }
+  ]
+}
